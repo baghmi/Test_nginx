@@ -1,0 +1,10 @@
+ ¿Qué pasa si no hago el link simbólico entre sites-available y sites-enabled de mi sitio web?
+
+ Si no hacemos uso del enlace simbólico, el servidor web solo cargara solo la configuracion que esten en sites-enabled
+ entonces aunque tengas la configuracion hecha correctamente la web no servira ni estara accesible
+
+ ¿Qué pasa si no le doy los permisos adecuados a /var/www/nombre_web?
+
+ Si los permisos con los que cuenta son muy restrictivos, no tendra permisos de lectura, ejecutar o etc.
+ Esto puede causar que nos de el error 403 forbidden.
+ Tambien puede suceder que si le damos muchos permisos podria conllevar un peligro de seguridad
