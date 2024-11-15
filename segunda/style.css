@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box{
+    width: 400px;
+    height: 400px;
+    background: repeating-conic-gradient( from var(--a), rgb(255, 255, 255) 0%,rgb(255, 255, 255) 5%, transparent 5%, transparent 40%,rgb(255, 255, 255) 50%);
+    border-radius: 15px;
+    position: relative;
+    animation: animated-border 4s linear infinite;
+}
+
+@property --a{
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    background: white;
+    inset: 4px;
+    border-radius:15px ;
+}
+
+@keyframes animated-border{
+    from{
+        --a: 0deg;
+    }
+    to{
+        --a: 360deg;
+    }
+}
